@@ -148,7 +148,7 @@ Mobile responsive interface
 
 🙏 Credits
 
-This project was developed using open-source resources and inspiration from the NeoCulture website.
+This project was developed using open-source resources and inspiration to not let the streak break.
 
 ---
 
