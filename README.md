@@ -24,7 +24,7 @@
 - Model evaluation (accuracy, precision, recall, confusion matrix)
 - Practical agriculture use-case
 
-→ [Go to Day 02 folder ,there is a readme where you will see all information→](./DAY-02)
+→ [Go to Day 02 folder ,there is a readme where you will see all information→](./Day02)
 
 ## Technologies Used Across Projects
 
