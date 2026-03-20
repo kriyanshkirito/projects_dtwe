@@ -24,8 +24,18 @@
 - Model evaluation (accuracy, precision, recall, confusion matrix)
 - Practical agriculture use-case
 
-→ [Go to Day 02 folder ,there is a readme where you will see all information→](./Day02)
+→ [Go to Day 02 folder ,there is a readme where you will see all information→](./DAY-02)
 
+🔹 Day 3 – Cement Strength Prediction 🏗️
+Regression model to predict cement strength
+Worked with real-world dataset
+Applied preprocessing and evaluation techniques
+→ [Go to Day 02 folder ,there is a readme where you will see all information→](./DAY-03)
+
+🔹 Day 4 – Cement Strength Web App 🌐
+Converted ML model into a web application using Flask
+Users can input values and get predictions
+→ [Go to Day 02 folder ,there is a readme where you will see all information→](./DAY-04)
 ## Technologies Used Across Projects
 
 - Python 3.8+
@@ -35,7 +45,3 @@
   - scikit-learn
   - jupyter (for analysis & experimentation)
 
-## How to Use This Repository
-
-
-1. Clone the repository
