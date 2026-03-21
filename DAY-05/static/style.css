@@ -1,0 +1,46 @@
+  body {
+            background-image: url("static/imgd5.jpg");
+            background-size: cover;
+
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(12, 2, 2);
+            text-shadow: 2px 2px 4px;
+            /*use to create shadow*/
+
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 20px;
+            margin-top: 30px;
+            ;
+        }
+
+        form {
+            padding: 20px;
+            font-size: 80px;
+            margin-left: 80px;
+        }
+
+      
+
+        input,select {
+            border: solid;
+            border-radius: 5px;
+            width: 300px;
+            height: 30px;
+            font-size: 16px;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+
+        input::placeholder {
+            color: black;
+
+        }
+        

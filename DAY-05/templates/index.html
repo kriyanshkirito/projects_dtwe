@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEMOGRAPHIC BASED PURCHASE INTENT ANALYSIS</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            background-image: url("/static/imgd5.jpg");
+            background-size: cover;
+            
+        }
+        h1 {
+            text-align: center;
+            color: #00E5FF;
+            text-shadow: 0 0 10px rgba(0,255,127,0.7),2px 2px 5px #000000;
+            /*use to create shadow*/
+
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 20px;
+            margin-top: 30px;
+            ;
+        }
+
+        form {
+           
+            padding: 20px;
+            font-size: 80px;
+            margin-left: 80px;
+        }
+        input,
+        select {
+            background:(255,255,255,0.1);
+            margin-left:980px;
+            border: solid #2ECC71;
+            margin:20px;
+            padding:2px;
+            border-radius: 5px;
+            width: 300px;
+            height: 30px;
+            font-size: 16px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        input::placeholder {
+            color: black;
+
+        }
+        input:focus{
+            border-color:#f1c40f;
+        }
+        #dora{
+            display: block;
+            margin:0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login">
+        <h1>DEMOGRAPHIC BASED PURCHASE INTENT ANALYSIS</h1>
+        <form action="{{ url_for('predict') }}" method="post">
+           <div id="dora"> 
+            <select name="Gender">
+                <option value="select">select</option>
+                <!-- value =1 is the data that get sent to the server -->
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+            </select><br>
+
+            <input type="text" name="Age" placeholder="Age" required="required" /><br>
+            <input type="text" name="Estimated Salary" placeholder="Estimated Salary" required="required" />
+           </div>
+            <button type="submit" class="btn btn">Predict</button>
+            
+        </form>
+        <h1 id="pred">
+            {{prediction_text}}
+
+        </h1>
+
+
+    </div>
+
+
+</body>
+
+</html>
