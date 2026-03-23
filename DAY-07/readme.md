@@ -44,7 +44,8 @@ Exploratory Data Analysis (EDA), feature relationships, and model evaluation.
 
 Modern UI with responsive form and animated particle background.
 
-> 📷 [![alt text](Screenshot&Videos/S1.png)]
+
+> 📷 ![alt text](Screenshot&Videos/S1.png)
 
 
 
@@ -55,7 +56,8 @@ Modern UI with responsive form and animated particle background.
 
 Real-time predictions generated via Flask backend.
 
-> 📷 [![alt text](Screenshot&Videos/S2.png)]
+
+> 📷 ![alt text](Screenshot&Videos/S2.png)
 
 
 
