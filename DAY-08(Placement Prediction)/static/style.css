@@ -1,0 +1,58 @@
+ body{
+            background-image:url("/static/anime1.jpg");
+            height:100vh;
+            margin:0;
+            background-size:cover;
+            
+        }
+        body:active{
+            background-image:url("/static/anime2.jpg")
+        }
+       
+        #btn {
+            background-color: aqua;
+            font-size: 20px;
+            padding: 10px;
+            cursor: pointer;
+            border-radius:5px;
+        }
+
+        #btn:active {
+            font-size: 24px;
+        }
+
+        .login {
+           
+            width: 400px;
+            height: 400px;
+            margin: 40px auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 15px;
+        }
+
+        #title {
+            text-align: center;
+            background-color: rgb(163, 12, 153);
+            color: white;
+            padding: 10px;
+        }
+       
+
+        #pred {
+            margin-bottom: 20px;
+            color:white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            font-weight: bold;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+        }
+        input:hover{
+            padding:10px;
+            font-size:30px;
+        }

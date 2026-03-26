@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML API</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        
+        #btn{
+            background-color:aqua;
+            font-size:30px;
+        }
+        #btn:active{
+            font-size:40px;
+        }
+
+        .login{
+           background-color: blue;
+            width:800px;
+            height:800px;
+             margin-top:40px;
+            display: flex;;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction:column ;
+            margin-left:300px
+
+        }
+        #title{
+            margin-top:0px;
+            margin-left:500px;
+        
+            background-color: rgb(163, 12, 12);
+        
+
+        }
+
+        #pred{
+          margin-bottom:100px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 id="title">Student Placement Prediction</h1>
+      <div style=" position: fixed;top:0;left:0;width:100%;height:100%;pointer-events: none;z-index:9999;" id="trail-container"></div>
+
+    <div class="login">
+        
+        <form action="{{ url_for('predict') }}" method="post">
+            <input id="btn" type="text"  name="Cgpa" placeholder="Cgpa" required="required"/> <br> <br>
+            <input id="btn" type="text"  name="IQ" placeholder="IQ" required="required"/><br> <br>
+            
+            <br>
+            <button id="btn" type="submit" class="btn btn">Predict</button>
+        </form>
+        
+      <h1 id="pred">
+        
+        {{prediction_text}}
+
+      </h1>
+
+</div>
+<audio id="myAudio">
+    <source src="/static/bubble_Sm6tHzA.mp3" type="audio">
+</audio>
+    
+
+      
+    <script>
+        const conatiner=document.getElementById("trail-container"); // Select html element on whom we have to add this effect;
+document.addEventListener('mousemove',(e)=>{         // add event  listner to whole page ,runs function every time mouse moves ,e points to object
+    const particle=document.createElement('div');  // create new div element for particle(new dot dot is going to be made when set border radius 50%)
+    particle.style.position='absolute';           //allow fre placement anywhere; 
+    particle.style.left=e.clientX+'px';           // mouse X postion 
+    particle.style.top=e.clientY+'px';            //mouse y postion
+    particle.style.width='8px';                   // set div score so we can made in dot
+    particle.style.height='8px';
+    particle.style.pointerEvents='none'
+    particle.style.background=`hsl(${Math.random()*360},100%,50%)`; /// math.random()*360 genrate random hue color whee
+    particle.style.borderRadius='50%';    //   converts sqaure into circle dot
+    particle.style.opacity='1';        // particle slighty tarnparent so look softer and smoother
+    conatiner.appendChild(particle);     // insert partcle into container now visible on the screen
+    particle.animate([
+        { transform:'translateY(0px)',opacity:1},  // start from normal postion, visble
+        { transform:'translateX(-80px)',opacity:0}    // moves upward and fade out
+    ],{duration:800,easing:'ease-out'});     // slows down at end  duration 800 ms
+
+    setTimeout(()=> particle.remove(),800);  
+}
+);
+
+
+let audio = document.getElementById("myAudio"); // (our audio file)
+let btn= document.getElementById("btn");  // (id of text or input box where you want sound)
+
+function toggleAudio() {
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
+        audio.currentTime = 0; // (if you not pass this then start from that time only)
+    }
+}
+
+btn.addEventListener('click', toggleAudio);  // (click on which on which to play with id)
+
+    </script>
+</body>
+</html>
